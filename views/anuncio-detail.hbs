@@ -1,0 +1,46 @@
+<div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href='/'>Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{add.title}}</li>
+        </ol>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">{{add.title}}</h4>
+                        <span class="badge badge-secondary">{{add.category}}</span>
+                        <p class="card-text">
+                        {{add.body}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="badge badge-danger">Contacto</span>
+                        <h4 class="card-title">Nombre</h4>
+                        <p class="card-text">
+                            {{add.name}}
+                        </p>
+                        <h4 class="card-title">Teléfono</h4>
+                        <p class="card-text">
+                            {{add.phone}}
+                        </p>
+                        <h4 class="card-title">Email</h4>
+                        <p class="card-text">
+                            {{add.email}}
+                        </p>
+                        <h4 class="card-title">Estado</h4>
+                        <p class="card-text">
+                            {{add.state}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

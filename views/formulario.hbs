@@ -1,0 +1,59 @@
+<div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href='/'>Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Crea tu anuncio clasificado</li>
+        </ol>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-xs-12 col-md-8">
+                <form class="post pt-5 pb-5" action='/formulario' method='post'>
+                    <div class="form-group">
+                        <label>Nombre del titular</label>
+                        <input required name='name' type="text" class="form-control" placeholder="Nombre" />
+                    </div>
+                    <div class="form-group">
+                        <label>Email del titular</label>
+                        <input required name='email' type="text" class="form-control" placeholder="Email" />
+                    </div>
+                    <div class="form-group">
+                        <label>Teléfono del titular</label>
+                        <input required name='phone' type="text" class="form-control" placeholder="Teléfono" />
+                    </div>
+                    {{!-- <div class="form-group">
+                        <label>Estado</label>
+                        <select required name='state' class="form-control">
+                            <option key={i} value={e}>{e}</option>
+                        </select>
+                    </div> --}}
+                    <div class="form-group">
+                        <label>Categoría</label>
+                        <select required name='category' class="form-control">
+                            <option value='Empleos'>Empleos</option>
+                            <option value='Inmuebles'>Inmuebles</option>
+                            <option value='Vehículos'>Vehículos</option>
+                            <option value='Servicios'>Servicios</option>
+                            <option value='Moda y Hogar'>Moda y Hogar</option>
+                            <option value='Electrónica'>Electrónica</option>
+                            <option value='Deportes y Tiempo Libre'>Deportes y Tiempo Libre</option>
+                            <option value='Niños y Bebes'>Niños y Bebes</option>
+                            <option value='Otros'>Otros</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Título del clasificado</label>
+                        <input required name='title' type="text" class="form-control" placeholder="Título" />
+                    </div>
+                    <div class="form-group">
+                        <label>Cuerpo del clasificado</label>
+                        <textarea required maxLength="250" name='body' cols="30" rows="7" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-outline-danger btn-block" value="Enviar" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

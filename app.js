@@ -12,7 +12,8 @@ const path         = require('path');
 
 mongoose.Promise = Promise;
 mongoose
-  .connect('mongodb://localhost/add', {useMongoClient: true})
+  .connect('mongodb://johnnyphocker:coolman1@ds249583.mlab.com:49583/clasificados')
+  //.connect('mongodb://localhost/add', {useMongoClient: true})
   .then(() => {
     console.log('Connected to Mongo!')
   }).catch(err => {

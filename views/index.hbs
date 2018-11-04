@@ -1,2 +1,44 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<div>
+    <div class='jumbotron jumbotron-fluid banner'>
+        <div class='container'>
+            <h1 class='display-4'>¿Buscas empleo?</h1>
+            <p class='lead white'>Encuentralo con nosotros</p>
+        </div>
+    </div>
+    
+    <div class='container body'>
+        <div class='row'>
+            {{#each add}}
+                <div class='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
+                        <div class='card'>
+                            <div class='card-body'>
+                                <h4 class='card-title'>{{this.title}}</h4>
+                                <span class="badge badge-secondary">{{this.category}}</span>
+                                <p class='card-text'>
+                                    {{this.body}}...
+                                </p>
+                                <div class='text-center me-interesa'>
+                                    <a href='/anuncio/{{this.id}}' class='btn'>
+                                        Me interesa
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            {{/each}}
+        </div>
+        <div class='row body pagination'>
+            <div class='col-xs-12'>
+                <nav aria-label="...">
+                    <ul class="pagination">
+                        {{#each pagination}}
+                        <li class="page-item">
+                            <a class="page-link" href="/{{this}}">{{this}}</a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </nav>    
+            </div>
+        </div>
+    </div>
+</div>
