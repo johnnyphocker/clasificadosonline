@@ -6,16 +6,18 @@ const datos = require('../estados.json');
 const Add = require('../models/add'); 
 
 router.get('/', (req, res, next) => {
-
   res.redirect('/1')
-  
 });
 
-/* GET home page */
+router.get('/formulario', (req, res, next) => {
+  res.render('formulario');
+});
+
+
 router.get('/:page', (req, res, next) => {
 
   let perPage = 20;
-  let {page} = req.params || 1;
+  let page = req.params.page || 1;
 
   Add.find({}, (err, add) => {
     if(err) {
@@ -32,6 +34,8 @@ router.get('/:page', (req, res, next) => {
   
 });
 
+
+
 router.get('/anuncio/:id', (req, res, next) => {
   const {id} = req.params;
   Add.findById({_id:id}, (err, add) => {
@@ -42,9 +46,7 @@ router.get('/anuncio/:id', (req, res, next) => {
   });
 });
 
-router.get('/formulario', (req, res, next) => {
-  res.render('formulario')
-})
+
 
 
 router.post('/formulario', (req, res, next) => {
