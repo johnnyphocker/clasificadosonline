@@ -30,7 +30,7 @@ router.get('/:page', (req, res, next) => {
       }
       res.render('index', {add, current: page, pages: Math.ceil(total/perPage), pagination})
     });  
-  }).skip((perPage * page) - perPage).limit(perPage);
+  }).skip((perPage * page) - perPage).limit(perPage).sort({date:-1});
   
 });
 
