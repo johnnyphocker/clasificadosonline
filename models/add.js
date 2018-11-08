@@ -32,6 +32,9 @@ const addSchema = new Schema({
     state: {
         type: String
     },
+    city: {
+        type: String
+    },
     isActive: {
         type: Boolean,
         default: true

@@ -50,8 +50,8 @@ router.get('/anuncio/:id', (req, res, next) => {
 
 
 router.post('/formulario', (req, res, next) => {
-  const {title, body, name, phone, email, category, state} = req.body;
-  const add = new Add({title, body, name, phone, email, category, state});
+  const {title, body, name, phone, email, category, state, city} = req.body;
+  const add = new Add({title, body, name, phone, email, category, state, city});
 
   add.save((err, addPost) => {
     if(err) {
